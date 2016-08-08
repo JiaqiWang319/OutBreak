@@ -51,6 +51,7 @@
      <Compile Include="Assets\scripts\RollRegularDie.cs" />
      <Compile Include="Assets\scripts\playerData.cs" />
      <Compile Include="Assets\scripts\processData.cs" />
+     <Compile Include="Assets\scripts\resourceCard.cs" />
      <Compile Include="Assets\scripts\situationData.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
