@@ -28,7 +28,10 @@ public class MapCard : MonoBehaviour
 
 public class Map : MonoBehaviour {
 
-    MapCard map1;
+    public MapCard map1;
+    public MapCard map2;
+
+
     // Use this for initialization
     void Start () {
 
@@ -36,6 +39,14 @@ public class Map : MonoBehaviour {
         map1.mapImg = GameObject.Find("map1Img");
         map1.fulldescription = "good";
         map1.id = 1;
+
+        map2.title = "";
+        map2.mapImg = GameObject.Find("");
+        map2.fulldescription = "";
+        map2.id = 2;
+
+
+         
     }
 	
 	// Update is called once per frame
