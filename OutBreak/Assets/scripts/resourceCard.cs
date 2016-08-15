@@ -7,7 +7,7 @@ public class resourceCard : MonoBehaviour {
     public Object resourceCardImg;
     public string function1 = null;
     public string function2 = null;
-    public string function3 = null;
+
 
   
 

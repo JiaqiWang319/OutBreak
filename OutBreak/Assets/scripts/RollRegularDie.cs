@@ -1,15 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class RollRegularDie : MonoBehaviour
 {
-    static public int rollRegularDie()
+    static public decimal rollRegularDie()
     {
-        int random = 0;
-        int diceNumber = 0;
+        decimal randNum = 0;
+        decimal diceNumber = 0;
 
-        random = Random.Range(1, 7);
+        randNum = UnityEngine.Random.Range(1, 7);
+        diceNumber = Math.Floor(randNum);
 
+        if (diceNumber == 7)
+        {
+            diceNumber = 6;
+        }
+/*
         if (random >= 1 && random < 2)
         {
             diceNumber = 1;
@@ -36,7 +43,7 @@ public class RollRegularDie : MonoBehaviour
         if (random >= 6 && random <= 7)
         {
             diceNumber = 6;
-        }
+        }*/
         return diceNumber;
     }
 }

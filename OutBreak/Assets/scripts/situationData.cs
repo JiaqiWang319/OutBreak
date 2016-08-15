@@ -3,12 +3,16 @@ using System.Collections;
 
 public class situationData : MonoBehaviour {
 
-    int nowPlaceId = 0;
-    int dieNumber = 0;
+    static public placeData  nowPlaceData;
+    decimal  dieNumber = 0;
 
     public placeData place1;
     public placeData place2;
     public placeData place3;
+
+   static  public int gotoredSignal = 0;
+   static  public int gotogreenSignal = 0;
+   static  public int stopSignal = 0;
 
     // Use this for initialization
     void Start () {
@@ -24,35 +28,30 @@ public class situationData : MonoBehaviour {
 	void Update () {
         dieNumber = RollRegularDie.rollRegularDie();
         //if roll die
-         GoOn(dieNumber, nowPlaceId);
+         findTileType(dieNumber, nowPlaceData );
 
 
     }
 
-    void GoOn(int die,int nowPlace)
+  void findTileType(decimal die,placeData nowPlace)
     {
-        int gotoredSignal = 0;
-        int gotogreenSignal = 0;
-        int stopId = 0;
-        int redId = 0;
-        int greenId = 0;
-        int stop = 0;
-        if(die > 0 && stop ==0)    //go front, if there is a stop sign, output stop signal
+
+        if(die > 0 && stopSignal ==0)    //go front, if there is a stop sign, output stop signal
         {
             die--;
-            nowPlace++;
-            if (nowPlace  == stopId )
+            nowPlace.id ++;
+            if (nowPlace.color   == "stop" )
             {
-                stop = 1;
+                stopSignal = 1;
             }
         }
         // if there is no stop on the way, then judge the token is on the red or green area?
-        if (nowPlace == redId)
+        if (nowPlace.color  == "red")
         {
             gotoredSignal = 1;
 
         }
-        else if (nowPlace == greenId)
+        else if (nowPlace.color== "green")
         {
             gotogreenSignal = 1;
 
@@ -64,7 +63,7 @@ public class placeData: MonoBehaviour
 {
     public int id;
     public string color;
-    public Object placeImg;
+    public GameObject placeImg;
 
 }
 

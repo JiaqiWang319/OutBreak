@@ -3,9 +3,9 @@ using System.Collections;
 
 public class playerData : MonoBehaviour {
 
-   public player player1;
-   public player player2;
-   public player player3;
+  static  public player player1;
+  static  public player player2;
+  static  public player player3;
 
 	// Use this for initialization
 	void Start () {
