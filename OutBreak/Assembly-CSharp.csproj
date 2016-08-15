@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\Map.cs" />
-     <Compile Include="Assets\scripts\MapCard.cs" />
      <Compile Include="Assets\scripts\RollAntidoteDice.cs" />
      <Compile Include="Assets\scripts\RollRegularDie.cs" />
      <Compile Include="Assets\scripts\batteryToken.cs" />

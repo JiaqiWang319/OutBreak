@@ -8,18 +8,6 @@ public class resourceCard : MonoBehaviour {
     public string function1 = null;
     public string function2 = null;
 
-
-  
-
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
 public class ResourceCardInformation : MonoBehaviour
 {
@@ -31,7 +19,7 @@ public class ResourceCardInformation : MonoBehaviour
         resourceCard1.resourceCardImg = GameObject.Find("");
         resourceCard1.function1 = "";
         resourceCard1.function2 = "";
-        resourceCard1.function3 = "";
+        
 
     }
 }

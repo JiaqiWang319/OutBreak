@@ -13,7 +13,8 @@ public class situationData : MonoBehaviour {
    static  public int gotoredSignal = 0;
    static  public int gotogreenSignal = 0;
    static  public int stopSignal = 0;
-
+    static public int rollDieSignal = 0;
+    string rollDie;
     // Use this for initialization
     void Start () {
 
@@ -26,7 +27,18 @@ public class situationData : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        dieNumber = RollRegularDie.rollRegularDie();
+        //click the sign to roll die
+        /*
+        if the sign has been clicked
+        rollDie = "Yes";
+        */
+        if (rollDie =="Yes")
+        {
+            dieNumber = RollRegularDie.rollRegularDie();
+            rollDie = "No";
+            rollDieSignal = 1;
+
+        }
         //if roll die
          findTileType(dieNumber, nowPlaceData );
 
