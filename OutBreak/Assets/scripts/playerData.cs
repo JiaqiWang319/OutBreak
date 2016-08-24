@@ -6,14 +6,8 @@ public class playerData : MonoBehaviour {
   static  public player player1;
   static  public player player2;
   static  public player player3;
+  
 
-	// Use this for initialization
-	void Start () {
-
-
-
-	}
-	
 	// Update is called once per frame
 	void Update () {
         //if resource card1 belongs to player1
@@ -25,11 +19,16 @@ public class playerData : MonoBehaviour {
       //  player1.batteryNumber = 3;  
     }
 }
+
+// a player data structure
 public class player: MonoBehaviour
 {
     int id;
     public resourceCard card1;
     public resourceCard card2;
     public resourceCard card3;
+    public resourceCard card4;
+
+
     public int batteryNumber;
 }

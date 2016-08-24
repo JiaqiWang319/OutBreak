@@ -3,24 +3,25 @@ using System.Collections;
 
 public class situationData : MonoBehaviour {
 
+    decimal dieNumber = 0;
+    /*
     static public placeData  nowPlaceData;
-    decimal  dieNumber = 0;
 
     public placeData place1;
     public placeData place2;
     public placeData place3;
-
+    */
    static  public int gotoredSignal = 0;
    static  public int gotogreenSignal = 0;
    static  public int stopSignal = 0;
     static public int rollDieSignal = 0;
     string rollDie;
+
+    static public string[] placeArray = new string[10] { "red", "green", "stop", "red", "green", "green", "red", "red", "stop", "green" };// here is only an example of the place, later coder could change the context of the array with new map of the board 
+    public int i = 0;// use for call for the array of placeArray string, placeArray[i]
+
     // Use this for initialization
     void Start () {
-
-        place1.id = 1;
-        place1.color = "red";
-        place1.placeImg = GameObject.Find("");  
        
   
 	}
@@ -40,30 +41,30 @@ public class situationData : MonoBehaviour {
 
         }
         //if roll die
-         findTileType(dieNumber, nowPlaceData );
+         findTileType(dieNumber);
 
 
     }
 
-  void findTileType(decimal die,placeData nowPlace)
+  void findTileType(decimal die)
     {
-
-        if(die > 0 && stopSignal ==0)    //go front, if there is a stop sign, output stop signal
+     
+        while(die > 0 && stopSignal ==0)    //go front, if there is a stop sign, output stop signal
         {
             die--;
-            nowPlace.id ++;
-            if (nowPlace.color   == "stop" )
+            i++;
+            if (placeArray[i] == "stop" )
             {
                 stopSignal = 1;
             }
         }
         // if there is no stop on the way, then judge the token is on the red or green area?
-        if (nowPlace.color  == "red")
+        if (placeArray [i] == "red")
         {
             gotoredSignal = 1;
 
         }
-        else if (nowPlace.color== "green")
+        else if (placeArray [i]== "green")
         {
             gotogreenSignal = 1;
 
@@ -71,6 +72,7 @@ public class situationData : MonoBehaviour {
 
     }
 }
+/*
 public class placeData: MonoBehaviour
 {
     public int id;
@@ -78,5 +80,6 @@ public class placeData: MonoBehaviour
     public GameObject placeImg;
 
 }
+*/
 
 

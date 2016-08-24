@@ -4,7 +4,7 @@ using System.Collections;
 public class moveToken : MonoBehaviour {
 
 
-    placeData nowPlace;
+   // placeData nowPlace;
     public GameObject token;
 
 
@@ -14,8 +14,8 @@ public class moveToken : MonoBehaviour {
 	void Update () {
        
         // call for information from the situationData
-        nowPlace = situationData.nowPlaceData;
-       token.transform.position= nowPlace.placeImg.transform.position;
+      //  nowPlace = situationData.nowPlaceData;
+      // token.transform.position= nowPlace.placeImg.transform.position;
 
 	}
 

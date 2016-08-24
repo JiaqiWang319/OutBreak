@@ -5,6 +5,7 @@ using System.Collections;
 
 public class RollAntidoteDice : MonoBehaviour
 {
+   //this 6 random class represent to the 6 dice which are rolled to decide the number of diamonds they get
    public random random1;
    public random random2;
    public random random3;

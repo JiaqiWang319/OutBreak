@@ -4,12 +4,12 @@ using System;
 
 public class RollRegularDie : MonoBehaviour
 {
-    static public decimal rollRegularDie()
+    static public decimal rollRegularDie()  //return the number of dice
     {
         decimal randNum = 0;
         decimal diceNumber = 0;
 
-        randNum = UnityEngine.Random.Range(1, 7);
+        randNum = UnityEngine.Random.Range(1, 7); 
         diceNumber = Math.Floor(randNum);
 
         if (diceNumber == 7)

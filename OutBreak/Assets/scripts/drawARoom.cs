@@ -15,20 +15,18 @@ public class drawARoom : MonoBehaviour {
 	void Update () {
 	if (situationData.stopSignal==1)
         {
-            print("You are going to draw a room");
-            whichMap=Random.Range(0, 9);
-            if (whichMap <= 1)
+            if (whichMap == GameSetup.mapcardNum)            //Add a catch, if at the end of the array, the game is over early, you lose
             {
-                nowMap = Map.map1;
-                //show the front information of  that map card
-                //call for the showQuestion() part
+                print("You Lose");
+
             }
-            if(whichMap>1&&whichMap <=2)
+            else                                            //Pull from that room card array from GameSetup.cs to find the next card
             {
-                nowMap = Map.map2;
+                print("You are going to draw a room");
+                nowMap = GameSetup.MapArray[whichMap];
+                print(nowMap.hiddenScription);
+                whichMap++;
             }
-            //....more map cards choice
-             
         }
 	}
 }
